@@ -42,10 +42,10 @@
                         <a class="nav-link" href="index.html">Home</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="faq.html">FAQs</a>
+                        <a class="nav-link" href="what-we.html">Registration</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="what-we.html">What we do</a>
+                        <a class="nav-link" href="faq.html">FAQs</a>
                      </li>
                      <li class="nav-item">
                         <a class="nav-link" href="blog.html">Blog</a>
@@ -113,8 +113,6 @@
             </div>
          </div>
       </div>
-      <!-- studies section end -->
-      <!-- footer section start -->
       <div class="footer_section layout_padding">
          <div class="container">
             <div class="row">
@@ -142,6 +140,27 @@
       <!-- sidebar -->
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>
-      <!-- javascript --> 
+      <script>
+          function showForm() {
+            const formSelector = document.getElementById('form-selector');
+            const lawyerForm = document.getElementById('lawyer-form');
+            const clientForm = document.getElementById('client-form');
+            const caseForm = document.getElementById('case-form');
+
+            // Hide all forms
+            lawyerForm.style.display = 'none';
+            clientForm.style.display = 'none';
+            caseForm.style.display = 'none';
+
+            // Show the selected form
+            if (formSelector.value === 'lawyer') {
+              lawyerForm.style.display = 'block';
+            } else if (formSelector.value === 'client') {
+              clientForm.style.display = 'block';
+            } else if (formSelector.value === 'case') {
+              caseForm.style.display = 'block';
+            }
+          }
+         </script>
    </body>
 </html>
