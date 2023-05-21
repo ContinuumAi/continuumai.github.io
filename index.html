@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
    <head>
+         <style>
+            label, input, select {
+              display: block;
+              margin-bottom: 40px;
+            }
+          </style>
       <!-- basic -->
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -92,33 +98,74 @@
                   <option value="client">Client Name</option>
                   <option value="case">Case Info</option>
                 </select>
+                   <br>
+                    <br>
+                   <br>
+<form id="lawyer-form" style="display:none;">
+    <br>
+    <br>
+  <label for="lawyer-email">Email:</label>
+  <input type="email" id="lawyer-email" name="email" placeholder="Email">
+        <br>
 
-            <form id="lawyer-form" style="display:none;">
-              <input type="email" name="email" placeholder="Email">
-              <select name="frequency">
-                <option value="single">Single</option>
-                <option value="daily">Daily</option>
-              </select>
-              <input type="text" name="lawyer-name" placeholder="Lawyer Name">
-            </form>
+  <label for="lawyer-frequency">Frequency:</label>
+           <br>
 
-            <form id="client-form" style="display:none;">
-              <input type="email" name="email" placeholder="Email">
-              <select name="frequency">
-                <option value="single">Single</option>
-                <option value="daily">Daily</option>
-              </select>
-              <input type="text" name="client-name" placeholder="Client Name">
-            </form>
+  <select id="lawyer-frequency" name="frequency">
+    <option value="single">Single</option>
+    <option value="daily">Daily</option>
+  </select>
+            <br>
+           <br>
 
-            <form id="case-form" style="display:none;">
-              <input type="email" name="email" placeholder="Email">
-              <select name="frequency">
-                <option value="single">Single</option>
-                <option value="daily">Daily</option>
-              </select>
-              <select name="case-type">
-                  <option value="" selected>Select an option</option>
+  <label for="lawyer-name">Lawyer Name:</label>
+  <input type="text" id="lawyer-name" name="lawyer-name" placeholder="Lawyer Name">
+</form>
+
+
+<form id="client-form" style="display:none;">
+        <br>
+    <br>
+
+  <label for="client-email">Email:</label>
+  <input type="email" id="client-email" name="email" placeholder="Email">
+    <br>
+
+  <label for="client-frequency">Frequency:</label>
+            <br>
+
+  <select id="client-frequency" name="frequency">
+    <option value="single">Single</option>
+    <option value="daily">Daily</option>
+  </select>
+        <br>
+    <br>
+
+  <label for="client-name">Client Name:</label>
+  <input type="text" id="client-name" name="client-name" placeholder="Client Name">
+</form>
+
+<form id="case-form" style="display:none;">
+        <br>
+    <br>
+
+  <label for="case-email">Email:</label>
+  <input type="email" id="case-email" name="email" placeholder="Email">
+    <br>
+    <label for="case-frequency">Frequency:</label>
+        <br>
+
+  <select id="case-frequency" name="frequency">
+    <option value="single">Single</option>
+    <option value="daily">Daily</option>
+  </select>
+      <br>
+    <br>
+
+    <label for="case-type">Case Type:</label>
+            <br>
+
+  <select id="case-type" name="case-type">
                     <option value="A">A_APPLICATION</option>
 					<option value="APPL.">APPL._APPLICATION (APPL.)</option>
 					<option value="APPLN">APPLN_APPLICATION (IP)</option>
@@ -207,10 +254,17 @@
 					<option value="WP">WP_WRIT PETITION</option>
 					<option value="WPMP">WPMP_W.P. MISCELLANEOUS P</option>
 					<option value="WVMP">WVMP_VACATING ORDER-MISC.</option>
-                  </select>
-                  <input type="text" name="case-number" placeholder="Case Number">
-                    <input type="number" name="year" placeholder="Year" min="1900" max="2099">
-                </form>
+  </select>
+      <br>
+    <br>
+
+    <label for="case-number">Case Number:</label>
+  <input type="text" id="case-number" name="case-number" placeholder="Case Number">
+      <br>
+
+    <label for="case-year">Year:</label>
+  <input type="number" id="case-year" name="year" placeholder="Year" min="1900" max="2099">
+</form>
                </div>
             </div>
          </div>
