@@ -86,12 +86,71 @@
             <div class="row">
                <div class="col-sm-12">
                   <h1 class="studies_taital">Registration</h1>
+                  <label for="options">Choose an option:</label>
+            <select id="options" onchange="showForm(this.value)">
+              <option value="">--Please choose an option--</option>
+              <option value="lawyer">Lawyer Name</option>
+              <option value="client">Client Name</option>
+              <option value="case">Case Info</option>
+            </select>
+
+            <div id="lawyer-form" style="display: none;">
+              <h3>Lawyer Name Form</h3>
+              <form>
+                <label for="lawyer-email">Email:</label>
+                <input type="email" id="lawyer-email" name="lawyer-email"><br><br>
+                <label for="lawyer-frequency">Frequency:</label>
+                <select id="lawyer-frequency" name="lawyer-frequency">
+                  <option value="single">Single</option>
+                  <option value="daily">Daily</option>
+                </select><br><br>
+                <label for="lawyer-name">Lawyer Name:</label>
+                <input type="text" id="lawyer-name" name="lawyer-name"><br><br>
+                <input type="submit" value="Submit">
+              </form>
+            </div>
+
+            <div id="client-form" style="display: none;">
+              <h3>Client Name Form</h3>
+              <form>
+                <label for="client-email">Email:</label>
+                <input type="email" id="client-email" name="client-email"><br><br>
+                <label for="client-frequency">Frequency:</label>
+                <select id="client-frequency" name="client-frequency">
+                  <option value="single">Single</option>
+                  <option value="daily">Daily</option>
+                </select><br><br>
+                <label for="client-name">Client Name:</label>
+                <input type="text" id="client-name" name="client-name"><br><br>
+                <input type="submit" value="Submit">
+              </form>
+            </div>
+            <div id="case-form" style="display: none;">
+              <h3>Case Info Form</h3>
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email"><br><br>
+              <label for="frequency">Frequency:</label>
+              <select id="frequency" name="frequency">
+                <option value="single">Single</option>
+                <option value="daily">Daily</option>
+              </select><br><br>
+              <label for="caseType">Case Type:</label>
+              <select id="caseType" name="caseType">
+                <option value="">Select an option</option>
+                <option value="X">X</option>
+                <option value="Y">Y</option>
+              </select><br><br>
+              <label for="caseNumber">Case Number:</label>
+              <input type="text" id="caseNumber" name="caseNumber"><br><br>
+              <label for="year">Year:</label>
+              <input type="number" id="year" name="year"><br><br>
+            </div>
+
                </div>
             </div>
          </div>
       </div>
-      <!-- services section end -->
-      <!-- studies section start -->
+
       <div class="studies_section layout_padding">
          <div class="container">
             <div class="row">
@@ -183,9 +242,23 @@
       <script src="js/bootstrap.bundle.min.js"></script>
       <script src="js/jquery-3.0.0.min.js"></script>
       <script src="js/plugin.js"></script>
-      <!-- sidebar -->
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>
-      <!-- javascript --> 
+      <script>
+      function showForm() {
+        var formSelect = document.getElementById("formSelect").value;
+
+        if (formSelect === "lawyerName") {
+          document.getElementById("lawyerNameForm").style.display = "block";
+          document.getElementById("caseInfoForm").style.display = "none";
+        } else if (formSelect === "caseInfo") {
+          document.getElementById("lawyerNameForm").style.display = "none";
+          document.getElementById("caseInfoForm").style.display = "block";
+        } else {
+          document.getElementById("lawyerNameForm").style.display = "none";
+          document.getElementById("caseInfoForm").style.display = "none";
+        }
+      }
+      </script>
    </body>
 </html>
