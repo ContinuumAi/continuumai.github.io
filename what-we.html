@@ -333,6 +333,7 @@
               searchTerm: lawyerName,
               frequency: frequency === "single" ? "single_time" : "daily",
             };
+            console.log(requestData)
 
             $.ajax({
               type: "POST",
@@ -389,7 +390,7 @@
               searchTerm: searchTerm,
               frequency: frequency === "single" ? "single_time" : "every_day",
             };
-
+            console.log(requestData)
             $.ajax({
               type: "POST",
               url:
@@ -417,6 +418,7 @@
               searchTerm: clientname,
               frequency: frequency === "single" ? "single_time" : "every_day",
             };
+            console.log(requestData)
 
             $.ajax({
               type: "POST",
