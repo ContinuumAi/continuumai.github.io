@@ -97,170 +97,176 @@
                    <br>
                     <br>
                    <br>
-<form id="lawyer-form" style="display:none;">
-    <br>
-    <br>
-  <label for="lawyer-email">Email:</label>
-  <input type="email" id="lawyer-email" name="email" placeholder="Email">
-        <br>
+                <form id="lawyer-form" style="display:none;">
+                    <br>
+                    <br>
+                  <label for="lawyer-email">Email:</label>
+                  <input type="email" id="lawyer-email" name="email" placeholder="Email">
+                        <br>
 
-  <label for="lawyer-frequency">Frequency:</label>
-           <br>
+                  <label for="lawyer-frequency">Frequency:</label>
+                           <br>
 
-  <select id="lawyer-frequency" name="frequency">
-    <option value="single">Single</option>
-    <option value="daily">Daily</option>
-  </select>
-            <br>
-           <br>
+                  <select id="lawyer-frequency" name="frequency">
+                    <option value="single">Single</option>
+                    <option value="daily">Daily</option>
+                  </select>
+                            <br>
+                           <br>
 
-  <label for="lawyer-name">Lawyer Name:</label>
-  <input type="text" id="lawyer-name" name="lawyer-name" placeholder="Lawyer Name">
-</form>
+                  <label for="lawyer-name">Lawyer Name:</label>
+                  <input type="text" id="lawyer-name" name="lawyer-name" placeholder="Lawyer Name">
+                  <br />
+                  <button type="button" id="submit-lawyer-form">Submit</button>
+                </form>
 
 
-<form id="client-form" style="display:none;">
-        <br>
-    <br>
+                <form id="client-form" style="display:none;">
+                        <br>
+                    <br>
 
-  <label for="client-email">Email:</label>
-  <input type="email" id="client-email" name="email" placeholder="Email">
-    <br>
+                  <label for="client-email">Email:</label>
+                  <input type="email" id="client-email" name="email" placeholder="Email">
+                    <br>
 
-  <label for="client-frequency">Frequency:</label>
-            <br>
+                  <label for="client-frequency">Frequency:</label>
+                            <br>
 
-  <select id="client-frequency" name="frequency">
-    <option value="single">Single</option>
-    <option value="daily">Daily</option>
-  </select>
-        <br>
-    <br>
+                  <select id="client-frequency" name="frequency">
+                    <option value="single">Single</option>
+                    <option value="daily">Daily</option>
+                  </select>
+                        <br>
+                    <br>
 
-  <label for="client-name">Client Name:</label>
-  <input type="text" id="client-name" name="client-name" placeholder="Client Name">
-</form>
+                  <label for="client-name">Client Name:</label>
+                  <input type="text" id="client-name" name="client-name" placeholder="Client Name">
+                  <br />
+                  <button type="button" id="submit-client-form">Submit</button>
+                </form>
 
-<form id="case-form" style="display:none;">
-        <br>
-    <br>
+                <form id="case-form" style="display:none;">
+                        <br>
+                    <br>
 
-  <label for="case-email">Email:</label>
-  <input type="email" id="case-email" name="email" placeholder="Email">
-    <br>
-    <label for="case-frequency">Frequency:</label>
-        <br>
+                  <label for="case-email">Email:</label>
+                  <input type="email" id="case-email" name="email" placeholder="Email">
+                    <br>
+                    <label for="case-frequency">Frequency:</label>
+                        <br>
 
-  <select id="case-frequency" name="frequency">
-    <option value="single">Single</option>
-    <option value="daily">Daily</option>
-  </select>
-      <br>
-    <br>
+                  <select id="case-frequency" name="frequency">
+                    <option value="single">Single</option>
+                    <option value="daily">Daily</option>
+                  </select>
+                      <br>
+                    <br>
 
-    <label for="case-type">Case Type:</label>
-            <br>
+                    <label for="case-type">Case Type:</label>
+                            <br>
 
-  <select id="case-type" name="case-type">
-                    <option value="A">A_APPLICATION</option>
-					<option value="APPL.">APPL._APPLICATION (APPL.)</option>
-					<option value="APPLN">APPLN_APPLICATION (IP)</option>
-					<option value="AS">AS_FIRST APPEAL</option>
-					<option value="APPEAL(CAD)">APPEAL(CAD)</option>
-					<option value="ARB APPEAL">ARBITRATION APPEAL</option>
-					<option value="ARB APPLN">ARB APPLN_ARBITRATION APPLICATIONS</option>
-					<option value="ARB O.P">ARB O.P_ARBITRATION ORIGINAL PETI.</option>
-					<option value="ARB O.P(COM.DIV.)">ARB O.P(COM.DIV.)_ARBITRATION ORIGINAL PETI.</option>
-					<option value="CMA">CMA_CIVIL MISC. APPEAL</option>
-					<option value="CMA NPD">CMA NPD_CMA Non Pending</option>
-					<option value="CMA PD">CMA PD_CMA Pending</option>
-					<option value="CMP">CMP_CIVIL MISC. PETITION</option>
-					<option value="CMSA">CMSA_CIVIL MISC SECOND AP</option>
-					<option value="COM APEL">COM APEL_Company Appeal</option>
-					<option value="COMP.A">COMP.A_COMPANY APPLICATIONS</option>
-					<option value="CONT A">CONT A_CONTEMPT APPEAL</option>
-					<option value="CONT APP">CONT APP_CONTEMPT APPLICATION</option>
-					<option value="CONT P">CONT P_CONTEMPT PETITION</option>
-					<option value="CP">CP_COMPANY PETITION</option>
-					<option value="CRL A">CRL A_CRIMINAL APPEAL</option>
-					<option value="CRL MP">CRL MP_CRIMINAL MISC. PETIT</option>
-					<option value="CRL OP">CRL OP_CRIMINAL ORIGINAL PETITION</option>
-					<option value="CRL RC">CRL RC_CRIMINAL REVISION</option>
-					<option value="CRL REF">CRL REF_CRIMINAL REF.</option>
-					<option value="CROS.OBJ">CROS.OBJ_CROSS OBJECTION</option>
-					<option value="CRP">CRP_CIVIL REVISION PETITION</option>
-					<option value="CRP NPD">CRP NPD_CIVIL REV.PETN.(NPD)</option>
-					<option value="CRP PD">CRP PD_CIVIL REV.PETN.(PD)</option>
-					<option value="CS">CS_CIVIL SUITS</option>
-					<option value="C.S(COMM DIV)">C.S(COMM DIV)_CIVIL SUITS COMM.</option>
-					<option value="ELP">ELP_ELECTION PETITION</option>
-					<option value="EP">EP_EXECUTION PETITION</option>
-					<option value="HCMP">HCMP_HABEAS CORPUS MISC.</option>
-					<option value="HCP">HCP_HABEAS CORPUS PETITI</option>
-					<option value="IA">IA_INSOLVENCY APPLICATI</option>
-					<option value="IC">IC_INSOLVENCY CASES</option>
-					<option value="IN">IN_INSOLVENCY NOTICE</option>
-					<option value="IP">IP_INSOLVENCY PETITION</option>
-					<option value="LPA">LPA_LETTERS PATENT APPEA</option>
-					<option value="LTS">LTS_LEAVE TO SUE</option>
-					<option value="MC">MC_MATRIMONIAL CAUSES</option>
-					<option value="MEMO(C)">MEMO(C)_MEMO</option>
-					<option value="MP">MP_MISC. PETITION</option>
-					<option value="OA">OA_ORIGINAL APPLICATION</option>
-					<option value="OMS">OMS_ORIGINAL MATRIMONIAL</option>
-					<option value="OP">OP_ORIGINAL PETITION</option>
-					<option value="O.P(COMM DIV)">O.P(COMM DIV)_ORIGINAL PETITION COMM DIV.</option>
-					<option value="OSA">OSA_ORIGINAL SIDE APPEAL</option>
-					<option value="OSA(CAD)">OSA(CAD)_ORIGINAL SIDE APPEAL(COMM. APP DIV)</option>
-					<option value="RC">RC_REFERRED CASES</option>
-					<option value="RCMP">RCMP_RCP MISC. PETITION</option>
-					<option value="RCP">RCP_REFERRED CASE PETITION</option>
-					<option value="REV.APLC">REV.APLC_REVIEW APPLN.(Civil)</option>
-					<option value="REV.APLO">REV.APLO_REVIEW APPLN.(OS)</option>
-					<option value="REV.APLW">REV.APLW_REVIEW APPLN.(Writ)</option>
-					<option value="REV.APPL">REV.APPL_REVIEW APPLICATIONS</option>
-					<option value="REV.PET">REV.PET_REVIEW PETITION(O)</option>
-					<option value="REV.STP">REV.STP_REVIEW SPL.TRIBUNAL</option>
-					<option value="RP">RP_Reference Petition</option>
-					<option value="RT">RT_REFERRED TRIAL</option>
-					<option value="SA">SA_SECOND APPEAL</option>
-					<option value="SCMP">SCMP_SUPREME COURT MISC.PETITION</option>
-					<option value="SCP">SCP_SUPREME COURT PETITION</option>
-					<option value="STA">STA_SPECIAL TRIBUNAL APP</option>
-					<option value="STP">STP_SPECIAL TRIBUNAL PETITION</option>
-					<option value="SUB A">SUB A_SUB APPLICATION</option>
-					<option value="SUB APPL">SUB APPL_SUB APPLICATIONS(OS)</option>
-					<option value="TC">TC_TAX CASES</option>
-					<option value="TCA">TCA_TAX CASE APPEAL</option>
-					<option value="TCMP">TCMP_TAX CMP</option>
-					<option value="TCP">TCP_TAX CASE PETITION</option>
-					<option value="TCR">TCR_TAX CASE REFERENCE</option>
-					<option value="TMA">TMA_TRADE MARKS APPEAL</option>
-					<option value="TMSA">TMSA_TRADE MARKS SECOND A</option>
-					<option value="TOS">TOS_TESTAMENTORY ORIGINAL SUIT</option>
-					<option value="TR APPL">TR APPL_TRANSFER APPLICATION</option>
-					<option value="TR AS">TR AS_TRANSFER FIRST APPEA</option>
-					<option value="TR CMA">TR CMA_TRANSFER CIVIL MISC.</option>
-					<option value="TR CMP">TR CMP_TRANSFER CIVIL MISC.</option>
-					<option value="TRCS">TRCS_TRANSFER CIVIL SUIT</option>
-					<option value="VCMP">VCMP_VACATING ORDER MISC.</option>
-					<option value="WA">WA_WRIT APPEAL</option>
-					<option value="WAMP">WAMP_W.A. MISCELLANEOUS P</option>
-					<option value="WMP">WMP_WRIT MISC. PETITION</option>
-					<option value="WP">WP_WRIT PETITION</option>
-					<option value="WPMP">WPMP_W.P. MISCELLANEOUS P</option>
-					<option value="WVMP">WVMP_VACATING ORDER-MISC.</option>
-  </select>
-      <br>
-    <br>
+                  <select id="case-type" name="case-type">
+                                    <option value="A">A_APPLICATION</option>
+                                    <option value="APPL.">APPL._APPLICATION (APPL.)</option>
+                                    <option value="APPLN">APPLN_APPLICATION (IP)</option>
+                                    <option value="AS">AS_FIRST APPEAL</option>
+                                    <option value="APPEAL(CAD)">APPEAL(CAD)</option>
+                                    <option value="ARB APPEAL">ARBITRATION APPEAL</option>
+                                    <option value="ARB APPLN">ARB APPLN_ARBITRATION APPLICATIONS</option>
+                                    <option value="ARB O.P">ARB O.P_ARBITRATION ORIGINAL PETI.</option>
+                                    <option value="ARB O.P(COM.DIV.)">ARB O.P(COM.DIV.)_ARBITRATION ORIGINAL PETI.</option>
+                                    <option value="CMA">CMA_CIVIL MISC. APPEAL</option>
+                                    <option value="CMA NPD">CMA NPD_CMA Non Pending</option>
+                                    <option value="CMA PD">CMA PD_CMA Pending</option>
+                                    <option value="CMP">CMP_CIVIL MISC. PETITION</option>
+                                    <option value="CMSA">CMSA_CIVIL MISC SECOND AP</option>
+                                    <option value="COM APEL">COM APEL_Company Appeal</option>
+                                    <option value="COMP.A">COMP.A_COMPANY APPLICATIONS</option>
+                                    <option value="CONT A">CONT A_CONTEMPT APPEAL</option>
+                                    <option value="CONT APP">CONT APP_CONTEMPT APPLICATION</option>
+                                    <option value="CONT P">CONT P_CONTEMPT PETITION</option>
+                                    <option value="CP">CP_COMPANY PETITION</option>
+                                    <option value="CRL A">CRL A_CRIMINAL APPEAL</option>
+                                    <option value="CRL MP">CRL MP_CRIMINAL MISC. PETIT</option>
+                                    <option value="CRL OP">CRL OP_CRIMINAL ORIGINAL PETITION</option>
+                                    <option value="CRL RC">CRL RC_CRIMINAL REVISION</option>
+                                    <option value="CRL REF">CRL REF_CRIMINAL REF.</option>
+                                    <option value="CROS.OBJ">CROS.OBJ_CROSS OBJECTION</option>
+                                    <option value="CRP">CRP_CIVIL REVISION PETITION</option>
+                                    <option value="CRP NPD">CRP NPD_CIVIL REV.PETN.(NPD)</option>
+                                    <option value="CRP PD">CRP PD_CIVIL REV.PETN.(PD)</option>
+                                    <option value="CS">CS_CIVIL SUITS</option>
+                                    <option value="C.S(COMM DIV)">C.S(COMM DIV)_CIVIL SUITS COMM.</option>
+                                    <option value="ELP">ELP_ELECTION PETITION</option>
+                                    <option value="EP">EP_EXECUTION PETITION</option>
+                                    <option value="HCMP">HCMP_HABEAS CORPUS MISC.</option>
+                                    <option value="HCP">HCP_HABEAS CORPUS PETITI</option>
+                                    <option value="IA">IA_INSOLVENCY APPLICATI</option>
+                                    <option value="IC">IC_INSOLVENCY CASES</option>
+                                    <option value="IN">IN_INSOLVENCY NOTICE</option>
+                                    <option value="IP">IP_INSOLVENCY PETITION</option>
+                                    <option value="LPA">LPA_LETTERS PATENT APPEA</option>
+                                    <option value="LTS">LTS_LEAVE TO SUE</option>
+                                    <option value="MC">MC_MATRIMONIAL CAUSES</option>
+                                    <option value="MEMO(C)">MEMO(C)_MEMO</option>
+                                    <option value="MP">MP_MISC. PETITION</option>
+                                    <option value="OA">OA_ORIGINAL APPLICATION</option>
+                                    <option value="OMS">OMS_ORIGINAL MATRIMONIAL</option>
+                                    <option value="OP">OP_ORIGINAL PETITION</option>
+                                    <option value="O.P(COMM DIV)">O.P(COMM DIV)_ORIGINAL PETITION COMM DIV.</option>
+                                    <option value="OSA">OSA_ORIGINAL SIDE APPEAL</option>
+                                    <option value="OSA(CAD)">OSA(CAD)_ORIGINAL SIDE APPEAL(COMM. APP DIV)</option>
+                                    <option value="RC">RC_REFERRED CASES</option>
+                                    <option value="RCMP">RCMP_RCP MISC. PETITION</option>
+                                    <option value="RCP">RCP_REFERRED CASE PETITION</option>
+                                    <option value="REV.APLC">REV.APLC_REVIEW APPLN.(Civil)</option>
+                                    <option value="REV.APLO">REV.APLO_REVIEW APPLN.(OS)</option>
+                                    <option value="REV.APLW">REV.APLW_REVIEW APPLN.(Writ)</option>
+                                    <option value="REV.APPL">REV.APPL_REVIEW APPLICATIONS</option>
+                                    <option value="REV.PET">REV.PET_REVIEW PETITION(O)</option>
+                                    <option value="REV.STP">REV.STP_REVIEW SPL.TRIBUNAL</option>
+                                    <option value="RP">RP_Reference Petition</option>
+                                    <option value="RT">RT_REFERRED TRIAL</option>
+                                    <option value="SA">SA_SECOND APPEAL</option>
+                                    <option value="SCMP">SCMP_SUPREME COURT MISC.PETITION</option>
+                                    <option value="SCP">SCP_SUPREME COURT PETITION</option>
+                                    <option value="STA">STA_SPECIAL TRIBUNAL APP</option>
+                                    <option value="STP">STP_SPECIAL TRIBUNAL PETITION</option>
+                                    <option value="SUB A">SUB A_SUB APPLICATION</option>
+                                    <option value="SUB APPL">SUB APPL_SUB APPLICATIONS(OS)</option>
+                                    <option value="TC">TC_TAX CASES</option>
+                                    <option value="TCA">TCA_TAX CASE APPEAL</option>
+                                    <option value="TCMP">TCMP_TAX CMP</option>
+                                    <option value="TCP">TCP_TAX CASE PETITION</option>
+                                    <option value="TCR">TCR_TAX CASE REFERENCE</option>
+                                    <option value="TMA">TMA_TRADE MARKS APPEAL</option>
+                                    <option value="TMSA">TMSA_TRADE MARKS SECOND A</option>
+                                    <option value="TOS">TOS_TESTAMENTORY ORIGINAL SUIT</option>
+                                    <option value="TR APPL">TR APPL_TRANSFER APPLICATION</option>
+                                    <option value="TR AS">TR AS_TRANSFER FIRST APPEA</option>
+                                    <option value="TR CMA">TR CMA_TRANSFER CIVIL MISC.</option>
+                                    <option value="TR CMP">TR CMP_TRANSFER CIVIL MISC.</option>
+                                    <option value="TRCS">TRCS_TRANSFER CIVIL SUIT</option>
+                                    <option value="VCMP">VCMP_VACATING ORDER MISC.</option>
+                                    <option value="WA">WA_WRIT APPEAL</option>
+                                    <option value="WAMP">WAMP_W.A. MISCELLANEOUS P</option>
+                                    <option value="WMP">WMP_WRIT MISC. PETITION</option>
+                                    <option value="WP">WP_WRIT PETITION</option>
+                                    <option value="WPMP">WPMP_W.P. MISCELLANEOUS P</option>
+                                    <option value="WVMP">WVMP_VACATING ORDER-MISC.</option>
+                  </select>
+                      <br>
+                    <br>
 
-    <label for="case-number">Case Number:</label>
-  <input type="text" id="case-number" name="case-number" placeholder="Case Number">
-      <br>
+                    <label for="case-number">Case Number:</label>
+                  <input type="text" id="case-number" name="case-number" placeholder="Case Number">
+                      <br>
 
-    <label for="case-year">Year:</label>
-  <input type="number" id="case-year" name="year" placeholder="Year" min="1900" max="2099">
-</form>
+                    <label for="case-year">Year:</label>
+                  <input type="number" id="case-year" name="year" placeholder="Year" min="1900" max="2099">
+                  <br />
+                  <button type="button" id="submit-case-form">Submit</button>
+                </form>
                </div>
             </div>
          </div>
@@ -315,5 +321,118 @@
             }
           }
          </script>
+       <script>
+          $("#submit-lawyer-form").click(function () {
+            const email = $("#lawyer-email").val();
+            const frequency = $("#lawyer-frequency").val();
+            const lawyerName = $("#lawyer-name").val();
+
+            const requestData = {
+              email: email,
+              notifType: "lawyer",
+              searchTerm: lawyerName,
+              frequency: frequency === "single" ? "single_time" : "daily",
+            };
+
+            $.ajax({
+              type: "POST",
+              url:
+                "http://ec2-52-66-207-39.ap-south-1.compute.amazonaws.com:8000/register",
+              data: JSON.stringify(requestData),
+              contentType: "application/json",
+              success: function (response) {
+                console.log("Form submitted successfully:", response);
+              },
+              error: function (error) {
+                console.log("Error submitting form:", error);
+              },
+            });
+          });
+       </script>
+       <script>
+          $("#submit-lawyer-form").click(function () {
+            const email = $("#lawyer-email").val();
+            const frequency = $("#lawyer-frequency").val();
+            const lawyerName = $("#lawyer-name").val();
+
+            const requestData = {
+              email: email,
+              notifType: "lawyer",
+              searchTerm: lawyerName,
+              frequency: frequency === "single" ? "single_time" : "every_day",
+            };
+
+            $.ajax({
+              type: "POST",
+              url:
+                "http://ec2-52-66-207-39.ap-south-1.compute.amazonaws.com:8000/register",
+              data: JSON.stringify(requestData),
+              contentType: "application/json",
+              success: function (response) {
+                console.log("Form submitted successfully:", response);
+              },
+              error: function (error) {
+                console.log("Error submitting form:", error);
+              },
+            });
+          });
+       </script>
+       <script>
+          $("#submit-case-form").click(function () {
+            const email = $("#case-email").val();
+            const frequency = $("#case-frequency").val();
+            const searchTerm = $("#case-type").val() + "_" + $("#case-number").val() + "_"+ $("#case-year").val();
+
+            const requestData = {
+              email: email,
+              notifType: "caseno",
+              searchTerm: searchTerm,
+              frequency: frequency === "single" ? "single_time" : "every_day",
+            };
+
+            $.ajax({
+              type: "POST",
+              url:
+                "http://ec2-52-66-207-39.ap-south-1.compute.amazonaws.com:8000/register",
+              data: JSON.stringify(requestData),
+              contentType: "application/json",
+              success: function (response) {
+                console.log("Form submitted successfully:", response);
+              },
+              error: function (error) {
+                console.log("Error submitting form:", error);
+              },
+            });
+          });
+       </script>
+       <script>
+          $("#submit-client-form").click(function () {
+            const email = $("#client-email").val();
+            const frequency = $("#client-frequency").val();
+            const clientname = $("#client-name").val();
+
+            const requestData = {
+              email: email,
+              notifType: "client",
+              searchTerm: clientname,
+              frequency: frequency === "single" ? "single_time" : "every_day",
+            };
+
+            $.ajax({
+              type: "POST",
+              url:
+                "http://ec2-52-66-207-39.ap-south-1.compute.amazonaws.com:8000/register",
+              data: JSON.stringify(requestData),
+              contentType: "application/json",
+              success: function (response) {
+                console.log("Form submitted successfully:", response);
+              },
+              error: function (error) {
+                console.log("Error submitting form:", error);
+              },
+            });
+          });
+       </script>
+
    </body>
 </html>
