@@ -338,35 +338,7 @@
             $.ajax({
               type: "POST",
               url:
-                "https://cors-anywhere.herokuapp.com/corsdemo/http://ec2-52-66-207-39.ap-south-1.compute.amazonaws.com:8000/register",
-              data: JSON.stringify(requestData),
-              contentType: "application/json",
-              success: function (response) {
-                console.log("Form submitted successfully:", response);
-              },
-              error: function (error) {
-                console.log("Error submitting form:", error);
-              },
-            });
-          });
-       </script>
-       <script>
-          $("#submit-lawyer-form").click(function () {
-            const email = $("#lawyer-email").val();
-            const frequency = $("#lawyer-frequency").val();
-            const lawyerName = $("#lawyer-name").val();
-
-            const requestData = {
-              email: email,
-              notifType: "lawyer",
-              searchTerm: lawyerName,
-              frequency: frequency === "single" ? "single_time" : "every_day",
-            };
-
-            $.ajax({
-              type: "POST",
-              url:
-                "https://cors-anywhere.herokuapp.com/corsdemo/http://ec2-52-66-207-39.ap-south-1.compute.amazonaws.com:8000/register",
+                "http://ec2-52-66-207-39.ap-south-1.compute.amazonaws.com:8000/register",
               data: JSON.stringify(requestData),
               contentType: "application/json",
               success: function (response) {
@@ -394,7 +366,7 @@
             $.ajax({
               type: "POST",
               url:
-                "https://cors-anywhere.herokuapp.com/corsdemo/http://ec2-52-66-207-39.ap-south-1.compute.amazonaws.com:8000/register",
+                "http://ec2-52-66-207-39.ap-south-1.compute.amazonaws.com:8000/register",
               data: JSON.stringify(requestData),
               contentType: "application/json",
               success: function (response) {
@@ -423,7 +395,7 @@
             $.ajax({
               type: "POST",
               url:
-                "https://cors-anywhere.herokuapp.com/corsdemo/http://ec2-52-66-207-39.ap-south-1.compute.amazonaws.com:8000/register",
+                "http://ec2-52-66-207-39.ap-south-1.compute.amazonaws.com:8000/register",
               data: JSON.stringify(requestData),
               contentType: "application/json",
               success: function (response) {
