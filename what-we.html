@@ -363,10 +363,23 @@
               frequency: frequency === "single" ? "single_time" : "every_day",
             };
             console.log(requestData)
+            // $.ajax({
+            //   type: "POST",
+            //   url:
+            //     "http://ec2-52-66-207-39.ap-south-1.compute.amazonaws.com:8000/register",
+            //   data: JSON.stringify(requestData),
+            //   contentType: "application/json",
+            //   success: function (response) {
+            //     console.log("Form submitted successfully:", response);
+            //   },
+            //   error: function (error) {
+            //     console.log("Error submitting form:", error);
+            //   },
+            // });
+            //
             $.ajax({
               type: "POST",
-              url:
-                "http://ec2-52-66-207-39.ap-south-1.compute.amazonaws.com:8000/register",
+              url: "https://newCauselist-2126171831.ap-south-1.elb.amazonaws.com/register",
               data: JSON.stringify(requestData),
               contentType: "application/json",
               success: function (response) {
@@ -375,7 +388,16 @@
               error: function (error) {
                 console.log("Error submitting form:", error);
               },
+              xhrFields: {
+                // Add this line to disable SSL certificate verification
+                withCredentials: true
+              },
+              beforeSend: function (xhr) {
+                // Add this line to disable SSL certificate verification
+                xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+              }
             });
+
           });
        </script>
        <script>
