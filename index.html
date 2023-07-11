@@ -390,12 +390,20 @@
          </script>
 
        <script>
+           function generateRandomHash() {
+              var hash = "";
+              var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+              for (var i = 0; i < 10; i++)
+                hash += possible.charAt(Math.floor(Math.random() * possible.length));
+              return hash;
+            }
           $("#submit-lawyer-form").click(function () {
             const email = $("#lawyer-email").val();
             const frequency = $("#lawyer-frequency").val();
             const lawyerName = $("#lawyer-name").val();
 
             const requestData = {
+              id: generateRandomHash(),
               email: email,
               notifType: "lawyer",
               searchTerm: lawyerName,
@@ -405,8 +413,7 @@
 
             $.ajax({
               type: "POST",
-              url:
-                "http://ec2-52-66-207-39.ap-south-1.compute.amazonaws.com:8000/register",
+              url: "https://script.google.com/macros/s/AKfycbw57VnWeSXezL_6IlVy_48Ir5is5w_3vNfqxuCi7JUQ2pJccgV23OkRheZYleKRiizaRQ/exec",
               data: JSON.stringify(requestData),
               contentType: "application/json",
               success: function (response) {
@@ -425,6 +432,7 @@
             const searchTerm = $("#case-type").val() + "_" + $("#case-number").val() + "_"+ $("#case-year").val();
 
             const requestData = {
+              id: generateRandomHash(),
               email: email,
               notifType: "caseno",
               searchTerm: searchTerm,
@@ -433,8 +441,7 @@
             console.log(requestData)
             $.ajax({
               type: "POST",
-              url:
-                "http://ec2-52-66-207-39.ap-south-1.compute.amazonaws.com:8000/register",
+              url: "https://script.google.com/macros/s/AKfycbw57VnWeSXezL_6IlVy_48Ir5is5w_3vNfqxuCi7JUQ2pJccgV23OkRheZYleKRiizaRQ/exec",
               data: JSON.stringify(requestData),
               contentType: "application/json",
               success: function (response) {
@@ -453,6 +460,7 @@
             const clientname = $("#client-name").val();
 
             const requestData = {
+              id: generateRandomHash(),
               email: email,
               notifType: "client",
               searchTerm: clientname,
@@ -460,23 +468,9 @@
             };
             console.log(requestData)
 
-            // $.ajax({
-            //   type: "POST",
-            //   url:
-            //     "http://ec2-52-66-207-39.ap-south-1.compute.amazonaws.com:8000/register",
-            //   data: JSON.stringify(requestData),
-            //   contentType: "application/json",
-            //   success: function (response) {
-            //     console.log("Form submitted successfully:", response);
-            //   },
-            //   error: function (error) {
-            //     console.log("Error submitting form:", error);
-            //   },
-            // });
-
               $.ajax({
               type: "POST",
-              url: "https://apis.continuumai.xyz/register",
+              url: "https://script.google.com/macros/s/AKfycbw57VnWeSXezL_6IlVy_48Ir5is5w_3vNfqxuCi7JUQ2pJccgV23OkRheZYleKRiizaRQ/exec",
               data: JSON.stringify(requestData),
               contentType: "application/json",
               success: function (response) {
@@ -484,14 +478,6 @@
               },
               error: function (error) {
                 console.log("Error submitting form:", error);
-              },
-              xhrFields: {
-                // Add this line to disable SSL certificate verification
-                withCredentials: true
-              },
-              beforeSend: function (xhr) {
-                // Add this line to disable SSL certificate verification
-                xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
               }
             });
           });
