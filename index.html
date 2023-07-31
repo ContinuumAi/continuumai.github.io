@@ -92,7 +92,7 @@
             <div class="row">
                <div class="col-sm-12">
                   <h1 class="studies_taital">Registration</h1>
-                <select id="form-selector" onchange="showForm()">
+                <select id="form-selector" onchange="showForm()" >
                   <option value="none" selected>--Select an option--</option>
                   <option value="lawyer">Lawyer Name</option>
                   <option value="client">Client Name</option>
@@ -121,7 +121,7 @@
                   <label for="lawyer-name">Lawyer Name:</label>
                   <input type="text" id="lawyer-name" name="lawyer-name" placeholder="Lawyer Name">
                   <br />
-                  <button type="button" id="submit-lawyer-form">Submit</button>
+                  <button type="button" id="submit-lawyer-form" >Submit</button>
                 </form>
 
 
@@ -146,7 +146,7 @@
                   <label for="client-name">Client Name:</label>
                   <input type="text" id="client-name" name="client-name" placeholder="Client Name">
                   <br />
-                  <button type="button" id="submit-client-form">Submit</button>
+                  <button type="button" id="submit-client-form" >Submit</button>
                 </form>
 
                 <form id="case-form" style="display:none;">
@@ -269,7 +269,7 @@
                     <label for="case-year">Year:</label>
                   <input type="number" id="case-year" name="year" placeholder="Year" min="1900" max="2099">
                   <br />
-                  <button type="button" id="submit-case-form">Submit</button>
+                  <button type="button" id="submit-case-form" >Submit</button>
                 </form>
                </div>
             </div>
@@ -418,6 +418,8 @@
           .then(response => response.json())
           .then(data => {
             console.log('Success:', data);
+            resetForm(); // reset the form after a successful API call
+
           })
           .catch((error) => {
             console.error('Error:', error);
@@ -453,6 +455,8 @@
           .then(response => response.json())
           .then(data => {
             console.log('Success:', data);
+            resetForm(); // reset the form after a successful API call
+
           })
           .catch((error) => {
             console.error('Error:', error);
@@ -488,6 +492,7 @@
           .then(response => response.json())
           .then(data => {
             console.log('Success:', data);
+            resetForm(); // reset the form after a successful API call
           })
           .catch((error) => {
             console.error('Error:', error);
@@ -495,5 +500,21 @@
         });
 
        </script>
+         <script>
+        function resetForm() {
+          // Reset the form elements
+          document.getElementById("lawyer-form").reset();
+          document.getElementById("client-form").reset();
+          document.getElementById("case-form").reset();
+
+          // Reset the select element
+          document.getElementById("form-selector").value = "none";
+
+          // Hide all form sections except the select an option prompt
+          document.getElementById("lawyer-form").style.display = "none";
+          document.getElementById("client-form").style.display = "none";
+          document.getElementById("case-form").style.display = "none";
+        }
+      </script>
    </body>
 </html>
